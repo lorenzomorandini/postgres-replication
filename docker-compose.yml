@@ -2,13 +2,11 @@ version: "3"
 
 services: 
   pg_master:  
-    build: ./master  
+    postgres:9.6.7
     volumes:   
       - pg_data:/var/lib/postgresql/data  
     environment:   
       - POSTGRES_PASSWORD=postgres
-      - PG_REP_USER=rep   
-      - PG_REP_PASSWORD=123456
     networks:   
       default:   
       
