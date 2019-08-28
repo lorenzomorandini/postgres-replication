@@ -16,7 +16,7 @@ sleep 1s
 
 done
 
-until pg_basebackup -h ${PG_MASTER_HOST} -D ${PGDATA} -U ${PG_REP_USER} -vP -W
+until pg_basebackup -h ${PG_MASTER_HOST} -p ${PG_MASTER_PORT} -D ${PGDATA} -U ${PG_REP_USER} -vP -W
 
 do
 
