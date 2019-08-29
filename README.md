@@ -23,10 +23,9 @@ Docker image to set up a postgres slave connected with a master
 
 * Add the following lines to $PGDATA/postgresql.conf
 
-wal_level = hot_standby
-
-    archive_mode = on
-    archive_command = 'cd .'
-    max_wal_senders = 8
-    wal_keep_segments = 8
-    hot_standby = on
+      wal_level = hot_standby
+      archive_mode = on
+      archive_command = 'cd .'
+      max_wal_senders = 8
+      wal_keep_segments = 8
+      hot_standby = on
