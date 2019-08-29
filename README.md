@@ -4,12 +4,11 @@ Docker image to set up a postgres slave connected with a master
 
 ### Build
 
-docker build . -t morandini/postgres-replication
+    docker build . -t morandini/postgres-replication
 
 ### Push
 
-docker push morandini/postgres-replication
-
+    docker push morandini/postgres-replication
 
 
 ## Configure master
