@@ -1,6 +1,6 @@
 #!/bin/sh
 
-if [ -f "$PGDATA/PG_VERSION" ]; then  # if needed otherwise "pg_basebackup" will throw an error that directory is not empty
+if [ ! -f "$PGDATA/PG_VERSION" ]; then  # if needed otherwise "pg_basebackup" will throw an error that directory is not empty
     echo "*:*:*:$PG_REP_USER:$PG_REP_PASSWORD" > ~/.pgpass
     chmod 0600 ~/.pgpass
     until ping -c 1 -W 1 ${PG_MASTER_HOST}
