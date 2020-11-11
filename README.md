@@ -29,3 +29,4 @@ Docker image to set up a postgres slave connected with a master
       max_wal_senders = 8
       wal_keep_segments = 8
       hot_standby = on
+      max_replication_slots = 1 (only to enable replication slots)
